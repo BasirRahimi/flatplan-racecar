@@ -1,0 +1,11 @@
+@for $i from 1 through 100 {
+    /* 
+    ************************  
+    Icon Sizes
+    ************************  
+    */
+    .icon-#{$i}px {
+        height: #{$i}px;
+        width: #{$i}px;
+    }
+}  

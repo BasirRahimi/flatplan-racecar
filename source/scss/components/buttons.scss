@@ -1,0 +1,16 @@
+@import '../variables';
+
+.btn {
+    padding: 5px 20px;
+    min-width: 200px;
+
+    &.btn-primary {
+        background-color: $black;
+        color: $white;
+    }
+
+    &.btn-secondary {
+        background-color: $white;
+        color: $white;
+    }
+}
