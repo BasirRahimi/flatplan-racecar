@@ -213,7 +213,7 @@ body {
   width: 300vw;
   padding-top: calc(300vw * .7112); // this is based on the flatplan image ratio
   transition: .75s;
-  background-image: url('/images/full-picture.png');
+  background-image: url('../images/full-picture.png');
   background-size: contain;
   background-position: 0 0;
   background-repeat: no-repeat;
