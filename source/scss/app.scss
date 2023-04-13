@@ -1,9 +1,14 @@
 // @import 'bootstrap/bootstrap';
+@import 'bootstrap/functions';
+@import 'bootstrap/mixins';
+@import 'bootstrap/variables';
 @import 'variables';
+@import 'bootstrap/utilities/text';
 @import 'utils/spacing';
-// @import 'utils/sizes';
 @import 'utils/layout';
 @import 'utils/type';
+@import 'bootstrap/buttons';
+@import 'components/buttons.scss';
 @import 'global';
 
 // @import 'components/buttons';
