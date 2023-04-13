@@ -119,6 +119,10 @@
             </div>
         </div>
         <div class="side-nav2">
+            <a onclick="goToSection(currentActiveScreen - 1)" id="prevButton" class="prev-button disabled arrow"></a>
+            <a onclick="goToSection(0)" class="nav-item">
+                <img src="./images/house-chimney-solid.svg" />
+            </a>
             <a onclick="goToSection(1)" class="nav-item">1</a>
             <a onclick="goToSection(2)" class="nav-item">2</a>
             <a onclick="goToSection(3)" class="nav-item">3</a>
@@ -129,9 +133,11 @@
             <a onclick="goToSection(8)" class="nav-item">8</a>
             <a onclick="goToSection(9)" class="nav-item">9</a>
             <a onclick="goToSection(10)" class="nav-item">10</a>
+            <a onclick="goToSection(11)" class="nav-item">
+                <img src="./images/flag-checkered-solid.svg" />
+            </a>
+            <a onclick="goToSection(currentActiveScreen + 1)" id="nextButton" class="next-button arrow"></a>
         </div>
-        <a onclick="goToSection(currentActiveScreen - 1)" id="prevButton" class="prev-button disabled"></a>
-        <a onclick="goToSection(currentActiveScreen + 1)" id="nextButton" class="next-button"></a>
 
         <div class="progress-nav">
             <div id="progress"></div>

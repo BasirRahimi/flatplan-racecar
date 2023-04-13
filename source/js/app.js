@@ -70,8 +70,8 @@ function updateElements() {
     }
 
     //add active class to the correct nav item
-    if (currentActiveScreen < 11) {
-        var activeItem = navItems[currentActiveScreen - 1];
+    if (currentActiveScreen < 12) {
+        var activeItem = navItems[currentActiveScreen];
         if (activeItem) {
             activeItem.classList.add('active');
             prevButton.classList.remove('disabled');

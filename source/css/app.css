@@ -7038,18 +7038,21 @@ body.initialised #landscapeNotice {
 
 .side-nav2 {
   position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%); }
-  .side-nav2 {
-    left: 36px; }
-    @media screen and (min-width: 720px) {
-      .side-nav2 {
-        left: calc(36px + 50 * ((100vw - 720px) / 960)); } }
-    @media screen and (min-width: 1680px) {
-      .side-nav2 {
-        left: 86px; } }
-  .side-nav2 .nav-item {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 2rem;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0px 0px 24px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 24px 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 24px;
+  padding: 0.5rem 1.5rem; }
+  .side-nav2 .nav-item,
+  .side-nav2 .arrow {
     position: relative;
     border: 1px solid white;
     color: white;
@@ -7067,76 +7070,96 @@ body.initialised #landscapeNotice {
             align-items: center;
     -webkit-transition: .25s;
     transition: .25s; }
-    .side-nav2 .nav-item {
+    .side-nav2 .nav-item,
+    .side-nav2 .arrow {
       font-size: 12px; }
       @media screen and (min-width: 720px) {
-        .side-nav2 .nav-item {
+        .side-nav2 .nav-item,
+        .side-nav2 .arrow {
           font-size: calc(12px + 12 * ((100vw - 720px) / 960)); } }
       @media screen and (min-width: 1680px) {
-        .side-nav2 .nav-item {
+        .side-nav2 .nav-item,
+        .side-nav2 .arrow {
           font-size: 24px; } }
-    .side-nav2 .nav-item {
+    .side-nav2 .nav-item,
+    .side-nav2 .arrow {
       height: 20px; }
       @media screen and (min-width: 720px) {
-        .side-nav2 .nav-item {
+        .side-nav2 .nav-item,
+        .side-nav2 .arrow {
           height: calc(20px + 25 * ((100vw - 720px) / 960)); } }
       @media screen and (min-width: 1680px) {
-        .side-nav2 .nav-item {
+        .side-nav2 .nav-item,
+        .side-nav2 .arrow {
           height: 45px; } }
-    .side-nav2 .nav-item {
+    .side-nav2 .nav-item,
+    .side-nav2 .arrow {
       width: 20px; }
       @media screen and (min-width: 720px) {
-        .side-nav2 .nav-item {
+        .side-nav2 .nav-item,
+        .side-nav2 .arrow {
           width: calc(20px + 25 * ((100vw - 720px) / 960)); } }
       @media screen and (min-width: 1680px) {
-        .side-nav2 .nav-item {
+        .side-nav2 .nav-item,
+        .side-nav2 .arrow {
           width: 45px; } }
-    .side-nav2 .nav-item:not(:last-child) {
-      margin-bottom: 4px; }
+    .side-nav2 .nav-item.next-button, .side-nav2 .nav-item.prev-button,
+    .side-nav2 .arrow.next-button,
+    .side-nav2 .arrow.prev-button {
+      width: auto;
+      border: 0; }
+    .side-nav2 .nav-item:not(:last-child),
+    .side-nav2 .arrow:not(:last-child) {
+      margin-right: 4px; }
       @media screen and (min-width: 720px) {
-        .side-nav2 .nav-item:not(:last-child) {
-          margin-bottom: calc(4px + 12 * ((100vw - 720px) / 960)); } }
+        .side-nav2 .nav-item:not(:last-child),
+        .side-nav2 .arrow:not(:last-child) {
+          margin-right: calc(4px + 12 * ((100vw - 720px) / 960)); } }
       @media screen and (min-width: 1680px) {
-        .side-nav2 .nav-item:not(:last-child) {
-          margin-bottom: 16px; } }
-    .side-nav2 .nav-item.active {
+        .side-nav2 .nav-item:not(:last-child),
+        .side-nav2 .arrow:not(:last-child) {
+          margin-right: 16px; } }
+    .side-nav2 .nav-item.active,
+    .side-nav2 .arrow.active {
       color: #85b450;
       border: 1px solid #85b450; }
-      .side-nav2 .nav-item.active {
+      .side-nav2 .nav-item.active,
+      .side-nav2 .arrow.active {
         border-width: 1px; }
         @media screen and (min-width: 720px) {
-          .side-nav2 .nav-item.active {
+          .side-nav2 .nav-item.active,
+          .side-nav2 .arrow.active {
             border-width: calc(1px + 3 * ((100vw - 720px) / 960)); } }
         @media screen and (min-width: 1680px) {
-          .side-nav2 .nav-item.active {
+          .side-nav2 .nav-item.active,
+          .side-nav2 .arrow.active {
             border-width: 4px; } }
+    .side-nav2 .nav-item img,
+    .side-nav2 .arrow img {
+      max-width: 1.5rem; }
 
 .next-button,
 .prev-button {
-  position: absolute;
   display: block;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
   text-decoration: none;
-  color: #85b450; }
+  color: #85b450;
+  position: relative; }
   .next-button,
   .prev-button {
     height: 16px; }
     @media screen and (min-width: 720px) {
       .next-button,
       .prev-button {
-        height: calc(16px + 14 * ((100vw - 720px) / 960)); } }
+        height: calc(16px + 8 * ((100vw - 720px) / 960)); } }
     @media screen and (min-width: 1680px) {
       .next-button,
       .prev-button {
-        height: 30px; } }
+        height: 24px; } }
   .next-button::before,
   .prev-button::before {
-    position: absolute;
-    top: 50%;
     content: ' ';
     display: block;
+    position: relative;
     -webkit-transform: rotateZ(45deg);
             transform: rotateZ(45deg); }
     .next-button::before,
@@ -7145,22 +7168,22 @@ body.initialised #landscapeNotice {
       @media screen and (min-width: 720px) {
         .next-button::before,
         .prev-button::before {
-          height: calc(16px + 14 * ((100vw - 720px) / 960)); } }
+          height: calc(16px + 8 * ((100vw - 720px) / 960)); } }
       @media screen and (min-width: 1680px) {
         .next-button::before,
         .prev-button::before {
-          height: 30px; } }
+          height: 24px; } }
     .next-button::before,
     .prev-button::before {
       width: 16px; }
       @media screen and (min-width: 720px) {
         .next-button::before,
         .prev-button::before {
-          width: calc(16px + 14 * ((100vw - 720px) / 960)); } }
+          width: calc(16px + 8 * ((100vw - 720px) / 960)); } }
       @media screen and (min-width: 1680px) {
         .next-button::before,
         .prev-button::before {
-          width: 30px; } }
+          width: 24px; } }
   .next-button.disabled,
   .prev-button.disabled {
     pointer-events: none;
@@ -7171,14 +7194,6 @@ body.initialised #landscapeNotice {
   .next-button::before {
     border-top: 4px solid #85b450;
     border-right: 4px solid #85b450; }
-    .next-button::before {
-      right: 20px; }
-      @media screen and (min-width: 720px) {
-        .next-button::before {
-          right: calc(20px + 0 * ((100vw - 720px) / 960)); } }
-      @media screen and (min-width: 1680px) {
-        .next-button::before {
-          right: 20px; } }
   .next-button.disabled::before {
     border-top: 2px solid white;
     border-right: 2px solid white; }
@@ -7188,14 +7203,6 @@ body.initialised #landscapeNotice {
   .prev-button::before {
     border-bottom: 4px solid #85b450;
     border-left: 4px solid #85b450; }
-    .prev-button::before {
-      left: 20px; }
-      @media screen and (min-width: 720px) {
-        .prev-button::before {
-          left: calc(20px + 0 * ((100vw - 720px) / 960)); } }
-      @media screen and (min-width: 1680px) {
-        .prev-button::before {
-          left: 20px; } }
   .prev-button.disabled::before {
     border-bottom: 2px solid white;
     border-left: 2px solid white; }

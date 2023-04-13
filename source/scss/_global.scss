@@ -413,11 +413,21 @@ body {
 
 .side-nav2 {
     position: absolute;
-    @include fluid-property(36px, 86px, 'left');
-    top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2rem;
+    max-width: 100%;
+    display: flex;
+    $sidenav2-bg: rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 0px 24px 10px $sidenav2-bg;
+    -moz-box-shadow: 0px 0px 24px 10px $sidenav2-bg;
+    box-shadow: 0px 0px 24px 10px $sidenav2-bg;
+    background-color: $sidenav2-bg;
+    border-radius: 24px;
+    padding: 0.5rem 1.5rem;
 
-    .nav-item {
+    .nav-item,
+    .arrow {
         position: relative;
         border: 1px solid $white;
         color: $white;
@@ -431,8 +441,14 @@ body {
         align-items: center;
         transition: .25s;
 
+        &.next-button,
+        &.prev-button {
+            width: auto;
+            border: 0;
+        }
+
         &:not(:last-child) {
-            @include fluid-property(4px, 16px, 'margin-bottom');
+            @include fluid-property(4px, 16px, 'margin-right');
         }
 
         &.active {
@@ -440,26 +456,27 @@ body {
             border: 1px solid $green;
             @include fluid-property(1px, 4px, 'border-width');
         }
+
+        img {
+            max-width: 1.5rem;
+        }
     }
 }
 
 .next-button,
 .prev-button {
-    position: absolute;
     display: block;
-    @include fluid-property(16px, 30px, 'height');
-    top: 50%;
-    transform: translateY(-50%);
+    @include fluid-property(16px, 24px, 'height');
     text-decoration: none;
     color: $green;
+    position: relative;
 
     &::before {
-        position: absolute;
-        top: 50%;
         content: ' ';
         display: block;
-        @include fluid-property(16px, 30px, 'height');
-        @include fluid-property(16px, 30px, 'width');
+        position: relative;
+        @include fluid-property(16px, 24px, 'height');
+        @include fluid-property(16px, 24px, 'width');
         transform: rotateZ(45deg);
     }
 
@@ -473,7 +490,7 @@ body {
     right: 0;
 
     &::before {
-        @include fluid-property(20px, 20px, 'right');
+        // @include fluid-property(20px, 20px, 'right');
         border-top: 4px solid $green;
         border-right: 4px solid $green;
     }
@@ -490,7 +507,7 @@ body {
     left: 0;
 
     &::before {
-        @include fluid-property(20px, 20px, 'left');
+        // @include fluid-property(20px, 20px, 'left');
         border-bottom: 4px solid $green;
         border-left: 4px solid $green;
     }
